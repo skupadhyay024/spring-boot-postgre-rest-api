@@ -30,7 +30,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 
 	@Override
 	public Employee getEmployee(int id) {
-		return employeeList.get(id+1);
+	    return employeeList.get(id-1);
 	}
 
 	@Override
