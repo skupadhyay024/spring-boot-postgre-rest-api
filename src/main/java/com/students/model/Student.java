@@ -28,23 +28,27 @@ public class Student implements Serializable {
     @Column(name = "name", nullable = false)
 	private String name;
 	
-    @Column(name = "dept", nullable = false)
-	private String dept;
+    @Column(name = "address", nullable = false)
+	private String address;
 	
-    @Column(name = "status", nullable = false)
-	private String status;
+    @Column(name = "phoneNumber", nullable = false)
+	private String phoneNumber;
 
 	public Student() {
 	
 	}
 
-	public Student(int id, String name, String dept, String status) {
+
+
+	public Student(int id, String name, String address, String phoneNumber) {
 		super();
 		this.id = id;
 		this.name = name;
-		this.dept = dept;
-		this.status = status;
+		this.address = address;
+		this.phoneNumber = phoneNumber;
 	}
+
+
 
 	public int getId() {
 		return id;
@@ -54,21 +58,22 @@ public class Student implements Serializable {
 		return name;
 	}
 
-	public String getDept() {
-		return dept;
+
+
+	public String getAddress() {
+		return address;
 	}
 
-	
-	public String getStatus() {
-		return status;
+	public String getPhoneNumber() {
+		return phoneNumber;
 	}
 
-	public void setStatus(String status) {
-		this.status = status;
-	}
+
 
 	@Override
 	public String toString() {
-		return "Student [id=" + id + ", name=" + name + ", dept=" + dept + "]";
-	}	
+		return "Student [id=" + id + ", name=" + name + ", address=" + address + ", phoneNumber=" + phoneNumber + "]";
+	}
+
+
 }
